@@ -45,6 +45,8 @@
 		E25EBD5725C0338D00F9B021 /* alimoniaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alimoniaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25EBD5B25C0338D00F9B021 /* alimoniaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alimoniaUITests.swift; sourceTree = "<group>"; };
 		E25EBD5D25C0338D00F9B021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2F842CE25C0B68D000FFBBD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E2F842CF25C0BA6B000FFBBD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,8 @@
 		E25EBD3225C0338C00F9B021 = {
 			isa = PBXGroup;
 			children = (
+				E2F842CF25C0BA6B000FFBBD /* LICENSE */,
+				E2F842CE25C0B68D000FFBBD /* README.md */,
 				E25EBD3D25C0338C00F9B021 /* alimonia */,
 				E25EBD4F25C0338D00F9B021 /* alimoniaTests */,
 				E25EBD5A25C0338D00F9B021 /* alimoniaUITests */,
@@ -427,6 +431,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = wtf.tomxpcvx.alimonia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -449,6 +454,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = wtf.tomxpcvx.alimonia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
