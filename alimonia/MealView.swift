@@ -15,25 +15,28 @@ struct MealView: View {
         NavigationView {
             Button("Show Alert") {
                 self.showingAlert = true
-                self.meals.append("Keks")
+                self.meals.append("Essen")
             }
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text("Mahlzeit hinzugefügt!"), message: Text("Der Eintrag wurde angelegt."), dismissButton: .default(Text("OK")))
             }
-            .navigationBarTitle(Text("Sheet View"), displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {
-                print("Dismissing sheet view...")
-                self.showingDetail = false
-            }) {
-                Text("Done").bold()
-            })
+            .navigationBarTitle(Text("Neue Mahlzeit"), displayMode: .inline)
+            .navigationBarItems(
+                leading: Button("Abbrechen"){
+                    self.showingDetail = false
+                },
+                trailing: Button("Hinzufügen") {
+                    self.showingDetail = false
+                    self.meals.append("Essen")
+                }
+            )
         }
     }
 }
 
 struct MealView_Previews: PreviewProvider {
     static var previews: some View {
-        MealView(showingDetail: .constant(false), meals: .constant(["1", "2"]))
+        MealView(showingDetail: .constant(false), meals: .constant(["Essen 1", "Essen 2"]))
     }
 }
 
