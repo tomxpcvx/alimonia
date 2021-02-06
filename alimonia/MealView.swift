@@ -9,25 +9,61 @@ import SwiftUI
 
 struct MealView: View {
     @State private var showingAlert = false
+    @State private var title: String = ""
+    @State private var placeholder: String = "Beschreibung"
+    @State private var description: String = ""
     @Binding var showingDetail: Bool
     @Binding var meals: Array<String>
     var body: some View {
         NavigationView {
-            Button("Show Alert") {
-                self.showingAlert = true
-                self.meals.append("Essen")
+            ZStack {
+                Color (UIColor.systemGroupedBackground)
+                    .edgesIgnoringSafeArea(.all)
+                VStack (alignment: .leading, spacing: 5) {
+                    VStack {
+                        TextField(
+                            "Titel",
+                            text: $title
+                        )
+                        .padding(.top, 2.0)
+                        .autocapitalization(.sentences)
+                        Divider()
+                        
+                        ZStack {
+                            if self.description.isEmpty {
+                                TextEditor(text:$placeholder)
+                                    .font(.body)
+                                    .foregroundColor(.gray)
+                                    .disabled(true)
+                                    .padding([.top, .leading], -3.0)
+                            }
+                            TextEditor(text: $description)
+                                .font(.body)
+                                .opacity(self.description.isEmpty ? 0.25 : 1)
+                                .padding([.top, .leading], -3.0)
+                                .onAppear() {
+                                    UITextView.appearance().backgroundColor = UIColor.secondarySystemGroupedBackground
+                                }
+                        }
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: 200, alignment: .top)
+                    .background(Color(UIColor.secondarySystemGroupedBackground))
+                    .cornerRadius(16)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                .padding()
+                .background(Color (UIColor.systemGroupedBackground))
             }
-            .alert(isPresented: $showingAlert) {
-                Alert(title: Text("Mahlzeit hinzugefügt!"), message: Text("Der Eintrag wurde angelegt."), dismissButton: .default(Text("OK")))
-            }
-            .navigationBarTitle(Text("Neue Mahlzeit"), displayMode: .inline)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .navigationBarTitle(Text("Neue Mahlzeit"), displayMode: .large)
             .navigationBarItems(
                 leading: Button("Abbrechen"){
                     self.showingDetail = false
                 },
                 trailing: Button("Hinzufügen") {
                     self.showingDetail = false
-                    self.meals.append("Essen")
+                    self.meals.append(title)
                 }
             )
         }
