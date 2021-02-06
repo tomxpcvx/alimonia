@@ -25,6 +25,7 @@ struct MealView: View {
                             "Titel",
                             text: $title
                         )
+                        .font(.body)
                         .padding(.top, 2.0)
                         .autocapitalization(.sentences)
                         Divider()
@@ -65,6 +66,7 @@ struct MealView: View {
                     self.showingDetail = false
                     self.meals.append(title)
                 }
+                .disabled(title.isEmpty)
             )
         }
     }
