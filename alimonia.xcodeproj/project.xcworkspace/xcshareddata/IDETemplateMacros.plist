@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>FILEHEADER</key>
+    <string>
+/* Copyright (C) ___YEAR___ tomxpcvx - All Rights Reserved
+ * You may use, distribute and modify this code under the
+ * terms of the AGPL-3.0 license.
+ *
+ * You should have received a copy of the AGPL-3.0 license with
+ * this software.
+ * If not, please write to: dev@tomxpcvx.wtf, or visit:
+ * https://github.com/tomxpcvx/alimonia-ios/blob/main/LICENSE
+ */
+	</string>
+</dict>
+</plist>

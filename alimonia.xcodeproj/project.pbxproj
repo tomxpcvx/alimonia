@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E25EBD3F25C0338C00F9B021 /* alimoniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EBD3E25C0338C00F9B021 /* alimoniaApp.swift */; };
-		E25EBD4125C0338C00F9B021 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EBD4025C0338C00F9B021 /* ContentView.swift */; };
+		E20978D42650304A0044CD9B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20978D32650304A0044CD9B /* HomeView.swift */; };
+		E20978D6265033090044CD9B /* MealStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20978D5265033090044CD9B /* MealStack.swift */; };
+		E20978DB265055090044CD9B /* MultilineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20978DA265055090044CD9B /* MultilineTextView.swift */; };
+		E225C4262650781300E96B50 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225C4252650781300E96B50 /* DataStore.swift */; };
+		E24E91C725CF111F00D3DD5F /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91C625CF111F00D3DD5F /* Meal.swift */; };
+		E24E91CF25CF11FB00D3DD5F /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91CE25CF11FB00D3DD5F /* Ingredient.swift */; };
+		E24E91D425CF124100D3DD5F /* Uom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91D325CF124100D3DD5F /* Uom.swift */; };
+		E25EBD3F25C0338C00F9B021 /* AlimoniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EBD3E25C0338C00F9B021 /* AlimoniaApp.swift */; };
+		E25EBD4125C0338C00F9B021 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EBD4025C0338C00F9B021 /* MealView.swift */; };
 		E25EBD4325C0338D00F9B021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25EBD4225C0338D00F9B021 /* Assets.xcassets */; };
 		E25EBD4625C0338D00F9B021 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25EBD4525C0338D00F9B021 /* Preview Assets.xcassets */; };
 		E25EBD5125C0338D00F9B021 /* alimoniaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EBD5025C0338D00F9B021 /* alimoniaTests.swift */; };
 		E25EBD5C25C0338D00F9B021 /* alimoniaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EBD5B25C0338D00F9B021 /* alimoniaUITests.swift */; };
-		E278B01B25C235A8000F5957 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278B01A25C235A8000F5957 /* MealView.swift */; };
+		E260CE5A2634D0D900F4A9FA /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260CE592634D0D900F4A9FA /* CustomTextEditor.swift */; };
+		E273099C264FF8E0009379D4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273099B264FF8E0009379D4 /* MainView.swift */; };
+		E278B01B25C235A8000F5957 /* NewMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278B01A25C235A8000F5957 /* NewMealView.swift */; };
+		E2F4864C26361A2500E0CC75 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4864B26361A2500E0CC75 /* Ingredients.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E20978D32650304A0044CD9B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E20978D5265033090044CD9B /* MealStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealStack.swift; sourceTree = "<group>"; };
+		E20978DA265055090044CD9B /* MultilineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextView.swift; sourceTree = "<group>"; };
+		E225C4252650781300E96B50 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		E24E91C625CF111F00D3DD5F /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		E24E91CE25CF11FB00D3DD5F /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		E24E91D325CF124100D3DD5F /* Uom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uom.swift; sourceTree = "<group>"; };
 		E25EBD3B25C0338C00F9B021 /* alimonia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alimonia.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E25EBD3E25C0338C00F9B021 /* alimoniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alimoniaApp.swift; sourceTree = "<group>"; };
-		E25EBD4025C0338C00F9B021 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E25EBD3E25C0338C00F9B021 /* AlimoniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlimoniaApp.swift; sourceTree = "<group>"; };
+		E25EBD4025C0338C00F9B021 /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 		E25EBD4225C0338D00F9B021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E25EBD4525C0338D00F9B021 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E25EBD4725C0338D00F9B021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +63,10 @@
 		E25EBD5725C0338D00F9B021 /* alimoniaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alimoniaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25EBD5B25C0338D00F9B021 /* alimoniaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alimoniaUITests.swift; sourceTree = "<group>"; };
 		E25EBD5D25C0338D00F9B021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E278B01A25C235A8000F5957 /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
+		E260CE592634D0D900F4A9FA /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
+		E273099B264FF8E0009379D4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E278B01A25C235A8000F5957 /* NewMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMealView.swift; sourceTree = "<group>"; };
+		E2F4864B26361A2500E0CC75 /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
 		E2F842CE25C0B68D000FFBBD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E2F842CF25C0BA6B000FFBBD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +96,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E20978D026502F0A0044CD9B /* home */ = {
+			isa = PBXGroup;
+			children = (
+				E20978D32650304A0044CD9B /* HomeView.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		E24E91C525CF10EA00D3DD5F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E24E91C625CF111F00D3DD5F /* Meal.swift */,
+				E24E91CE25CF11FB00D3DD5F /* Ingredient.swift */,
+				E24E91D325CF124100D3DD5F /* Uom.swift */,
+				E2F4864B26361A2500E0CC75 /* Ingredients.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		E25EBD3225C0338C00F9B021 = {
 			isa = PBXGroup;
 			children = (
@@ -101,12 +140,14 @@
 		E25EBD3D25C0338C00F9B021 /* alimonia */ = {
 			isa = PBXGroup;
 			children = (
-				E25EBD3E25C0338C00F9B021 /* alimoniaApp.swift */,
-				E25EBD4025C0338C00F9B021 /* ContentView.swift */,
+				E260CE582634D0C600F4A9FA /* components */,
+				E29962362634BFAE0079E8DC /* views */,
+				E24E91C525CF10EA00D3DD5F /* model */,
+				E25EBD3E25C0338C00F9B021 /* AlimoniaApp.swift */,
 				E25EBD4225C0338D00F9B021 /* Assets.xcassets */,
 				E25EBD4725C0338D00F9B021 /* Info.plist */,
 				E25EBD4425C0338D00F9B021 /* Preview Content */,
-				E278B01A25C235A8000F5957 /* MealView.swift */,
+				E225C4252650781300E96B50 /* DataStore.swift */,
 			);
 			path = alimonia;
 			sourceTree = "<group>";
@@ -135,6 +176,35 @@
 				E25EBD5D25C0338D00F9B021 /* Info.plist */,
 			);
 			path = alimoniaUITests;
+			sourceTree = "<group>";
+		};
+		E260CE582634D0C600F4A9FA /* components */ = {
+			isa = PBXGroup;
+			children = (
+				E260CE592634D0D900F4A9FA /* CustomTextEditor.swift */,
+				E20978D5265033090044CD9B /* MealStack.swift */,
+				E20978DA265055090044CD9B /* MultilineTextView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		E273099A264FF3E3009379D4 /* meals */ = {
+			isa = PBXGroup;
+			children = (
+				E25EBD4025C0338C00F9B021 /* MealView.swift */,
+				E278B01A25C235A8000F5957 /* NewMealView.swift */,
+			);
+			path = meals;
+			sourceTree = "<group>";
+		};
+		E29962362634BFAE0079E8DC /* views */ = {
+			isa = PBXGroup;
+			children = (
+				E20978D026502F0A0044CD9B /* home */,
+				E273099A264FF3E3009379D4 /* meals */,
+				E273099B264FF8E0009379D4 /* MainView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +336,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E25EBD4125C0338C00F9B021 /* ContentView.swift in Sources */,
-				E25EBD3F25C0338C00F9B021 /* alimoniaApp.swift in Sources */,
-				E278B01B25C235A8000F5957 /* MealView.swift in Sources */,
+				E2F4864C26361A2500E0CC75 /* Ingredients.swift in Sources */,
+				E20978DB265055090044CD9B /* MultilineTextView.swift in Sources */,
+				E273099C264FF8E0009379D4 /* MainView.swift in Sources */,
+				E24E91C725CF111F00D3DD5F /* Meal.swift in Sources */,
+				E20978D42650304A0044CD9B /* HomeView.swift in Sources */,
+				E24E91D425CF124100D3DD5F /* Uom.swift in Sources */,
+				E260CE5A2634D0D900F4A9FA /* CustomTextEditor.swift in Sources */,
+				E225C4262650781300E96B50 /* DataStore.swift in Sources */,
+				E25EBD4125C0338C00F9B021 /* MealView.swift in Sources */,
+				E24E91CF25CF11FB00D3DD5F /* Ingredient.swift in Sources */,
+				E25EBD3F25C0338C00F9B021 /* AlimoniaApp.swift in Sources */,
+				E20978D6265033090044CD9B /* MealStack.swift in Sources */,
+				E278B01B25C235A8000F5957 /* NewMealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +510,7 @@
 				DEVELOPMENT_TEAM = T8G3CH646T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = alimonia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,7 +533,7 @@
 				DEVELOPMENT_TEAM = T8G3CH646T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = alimonia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
