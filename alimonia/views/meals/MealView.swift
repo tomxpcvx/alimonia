@@ -10,76 +10,63 @@
 
 
 import SwiftUI
+import NavigationSearchBar
+import CoreData
 
-/// Bundles all meal related
+
+/// Bundles all meal related views
 struct MealView: View {
-    @State var showingDetail = false
     
-    @Binding var meals: Array<Meal>
+    @State var showingDetail = false
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(entity: Meal.entity(), sortDescriptors: [NSSortDescriptor(key:"name", ascending:true)])
+    var meals: FetchedResults<Meal>
+    let columns = [GridItem(.adaptive(minimum: 165))]
     
     var body: some View {
         NavigationView {
             ZStack {
-                Color("color-background")
-                    .edgesIgnoringSafeArea(.all)
-                ScrollView(.vertical, showsIndicators: true) {
-                    VStack (alignment: .leading) {
-                        if meals.count > 0 {
-                            ForEach(meals) { meal in
-                                MealStack(meal: meal)
-                            }
-                        } else {
-                            VStack (alignment: .leading, spacing: 5) {
-                                HStack {
-                                    Text("Füge neue Mahlzeiten hinzu!")
+                // Fixes the background color above the ScrollView
+                Color(UIColor.systemGroupedBackground).edgesIgnoringSafeArea(.all)
+                ScrollView {
+                    // VStack needed to increase the space between NavigationTitle and LazyVGrid
+                    VStack {
+                        LazyVGrid(columns: columns, spacing: 10) {
+                            ForEach(meals, id: \.self) { meal in
+                                NavigationLink(
+                                    destination: DetailMealView(meal: meal)
+                                ) {
+                                    MealStack(meal: meal)
                                 }
+                                .buttonStyle(PlainButtonStyle())
                             }
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color (UIColor.secondarySystemGroupedBackground))
-                            .cornerRadius(16)
                         }
-                        
-                        Spacer()
-                        
-                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .padding()
-                    .background(Color (UIColor.systemGroupedBackground))
-                    .navigationBarTitle("Mahlzeiten")
-                    .navigationBarItems(trailing: Button(action: {
-                        self.showingDetail.toggle()
-                    }) {
-                        Image(systemName: "plus.circle").imageScale(.large)
-                    }.sheet(isPresented: $showingDetail) {
-                        NewMealView(
-                            showingDetail: self.$showingDetail,
-                            meals: self.$meals
-                        )
+                        .padding(.horizontal)
                     }
-                    )
+                    .padding(.top)
                 }
+                .fixFlickering()
+                .navigationTitle("Mahlzeiten")
+                .navigationBarItems(
+                    trailing:
+                        Button(action: {
+                            showingDetail = true
+                        }, label: {
+                            Image(systemName: "plus.circle")
+                                .imageScale(.large)
+                        }))
+                .sheet(isPresented: $showingDetail) {
+                    NewMealView(showingDetail: $showingDetail)
+                }
+                .background(Color(UIColor.systemGroupedBackground))
             }
-            
         }
     }
 }
 
+
 struct MealView_Previews: PreviewProvider {
     static var previews: some View {
-        MealView(meals: .constant(
-            [
-                Meal(
-                    name: "Caesar Salad",
-                    notes: "American style, great with grilled or short roasted meat.",
-                    ingredients: [
-                        Ingredient(
-                            name: "1",
-                            amount: 2,
-                            uom: Uom.kg
-                        )
-                    ]
-                )
-            ]
-        ))
+        MealView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

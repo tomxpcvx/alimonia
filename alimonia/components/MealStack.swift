@@ -15,40 +15,44 @@ struct MealStack: View {
     var meal: Meal
     
     var body: some View {
-        VStack (alignment: .leading, spacing: 5) {
-            HStack {
-                Text(meal.name)
-                Spacer()
-            }
-            .font(Font.largeTitle.bold())
-            .foregroundColor(.green)
-            
-            HStack {
-                Text (meal.notes)
+        VStack(alignment: .leading, spacing: 0) {
+            VStack {
+                Image(uiImage: UIImage(
+                    data: (
+                        meal.img ??
+                            UIImage(named: "Placeholder")?
+                            .jpegData(compressionQuality: 1)
+                    )!
+                )!
+                )
+                .resizable()
+                .scaledToFill()
+                .frame(width: 165, height:165)
+                .clipped()
+                VStack {
+                    Text(meal.name!)
+                        .font(.system(size: 14))
+                        .frame(width: 165, height: 10, alignment: .topLeading)
+                        .padding(.bottom, 0.1)
+                        .padding(.leading, 25)
+                    Text (meal.notes ?? "")
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .lineLimit(2)
+                        .font(.system(size: 12))
+                        .frame(width: 165, height: 40, alignment: .topLeading)
+                        .padding(.leading, 25)
+                }
             }
         }
-        .padding()
-        .frame(maxWidth: .infinity)
-        .background(Color (UIColor.secondarySystemGroupedBackground))
+        .frame(width: 165, height: 220)
+        .background(Color(UIColor.secondarySystemGroupedBackground))
         .cornerRadius(16)
     }
 }
 
 struct MealStack_Previews: PreviewProvider {
     static var previews: some View {
-        MealStack(
-            meal: Meal(
-                name: "Caesar Salad",
-                notes: "American style, great with grilled or short roasted meat.",
-                ingredients: [
-                    Ingredient(
-                        name: "1",
-                        amount: 2,
-                        uom: Uom.kg
-                    )
-                ]
-            )
-            
-        )
+         MealStack(meal: Meal())
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class Ingredients: ObservableObject {
-    @Published var items = [Ingredient]()
+class CIngredients: ObservableObject {
+    @Published var items = [CIngredient]()
     
 }

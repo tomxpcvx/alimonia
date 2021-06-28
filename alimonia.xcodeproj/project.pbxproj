@@ -3,17 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		E20978D42650304A0044CD9B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20978D32650304A0044CD9B /* HomeView.swift */; };
 		E20978D6265033090044CD9B /* MealStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20978D5265033090044CD9B /* MealStack.swift */; };
 		E20978DB265055090044CD9B /* MultilineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20978DA265055090044CD9B /* MultilineTextView.swift */; };
-		E225C4262650781300E96B50 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225C4252650781300E96B50 /* DataStore.swift */; };
-		E24E91C725CF111F00D3DD5F /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91C625CF111F00D3DD5F /* Meal.swift */; };
-		E24E91CF25CF11FB00D3DD5F /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91CE25CF11FB00D3DD5F /* Ingredient.swift */; };
-		E24E91D425CF124100D3DD5F /* Uom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91D325CF124100D3DD5F /* Uom.swift */; };
+		E20DB226268A4A6500EDCEEA /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20DB225268A4A6500EDCEEA /* Blur.swift */; };
+		E20DB229268A4C3A00EDCEEA /* PositionScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = E20DB228268A4C3A00EDCEEA /* PositionScrollView */; };
+		E215A1172673B92A000C7011 /* CustomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E215A1162673B92A000C7011 /* CustomScrollView.swift */; };
+		E225C42926507CEF00E96B50 /* Alimonia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E225C42726507CEF00E96B50 /* Alimonia.xcdatamodeld */; };
+		E225C42B26508E9800E96B50 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225C42A26508E9800E96B50 /* Persistence.swift */; };
+		E225C42D26513B0600E96B50 /* NavigationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225C42C26513B0600E96B50 /* NavigationSearch.swift */; };
+		E225C43026513C4E00E96B50 /* NavigationSearchBar in Frameworks */ = {isa = PBXBuildFile; productRef = E225C42F26513C4E00E96B50 /* NavigationSearchBar */; };
+		E24E91C725CF111F00D3DD5F /* CMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91C625CF111F00D3DD5F /* CMeal.swift */; };
+		E24E91CF25CF11FB00D3DD5F /* CIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91CE25CF11FB00D3DD5F /* CIngredient.swift */; };
+		E24E91D425CF124100D3DD5F /* CUom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91D325CF124100D3DD5F /* CUom.swift */; };
 		E25EBD3F25C0338C00F9B021 /* AlimoniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EBD3E25C0338C00F9B021 /* AlimoniaApp.swift */; };
 		E25EBD4125C0338C00F9B021 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EBD4025C0338C00F9B021 /* MealView.swift */; };
 		E25EBD4325C0338D00F9B021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25EBD4225C0338D00F9B021 /* Assets.xcassets */; };
@@ -23,7 +29,10 @@
 		E260CE5A2634D0D900F4A9FA /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260CE592634D0D900F4A9FA /* CustomTextEditor.swift */; };
 		E273099C264FF8E0009379D4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273099B264FF8E0009379D4 /* MainView.swift */; };
 		E278B01B25C235A8000F5957 /* NewMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278B01A25C235A8000F5957 /* NewMealView.swift */; };
-		E2F4864C26361A2500E0CC75 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4864B26361A2500E0CC75 /* Ingredients.swift */; };
+		E281E805265863A1008C0DAD /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281E804265863A1008C0DAD /* ImagePicker.swift */; };
+		E281E80E265AE933008C0DAD /* DetailMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281E80D265AE933008C0DAD /* DetailMealView.swift */; };
+		E281E810265B055E008C0DAD /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281E80F265B055E008C0DAD /* VisualEffectBlur.swift */; };
+		E2F4864C26361A2500E0CC75 /* CIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4864B26361A2500E0CC75 /* CIngredients.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +56,14 @@
 		E20978D32650304A0044CD9B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E20978D5265033090044CD9B /* MealStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealStack.swift; sourceTree = "<group>"; };
 		E20978DA265055090044CD9B /* MultilineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextView.swift; sourceTree = "<group>"; };
-		E225C4252650781300E96B50 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		E24E91C625CF111F00D3DD5F /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		E24E91CE25CF11FB00D3DD5F /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
-		E24E91D325CF124100D3DD5F /* Uom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uom.swift; sourceTree = "<group>"; };
+		E20DB225268A4A6500EDCEEA /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
+		E215A1162673B92A000C7011 /* CustomScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollView.swift; sourceTree = "<group>"; };
+		E225C42826507CEF00E96B50 /* Alimonia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alimonia.xcdatamodel; sourceTree = "<group>"; };
+		E225C42A26508E9800E96B50 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		E225C42C26513B0600E96B50 /* NavigationSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSearch.swift; sourceTree = "<group>"; };
+		E24E91C625CF111F00D3DD5F /* CMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMeal.swift; sourceTree = "<group>"; };
+		E24E91CE25CF11FB00D3DD5F /* CIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIngredient.swift; sourceTree = "<group>"; };
+		E24E91D325CF124100D3DD5F /* CUom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUom.swift; sourceTree = "<group>"; };
 		E25EBD3B25C0338C00F9B021 /* alimonia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alimonia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25EBD3E25C0338C00F9B021 /* AlimoniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlimoniaApp.swift; sourceTree = "<group>"; };
 		E25EBD4025C0338C00F9B021 /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
@@ -66,7 +79,10 @@
 		E260CE592634D0D900F4A9FA /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		E273099B264FF8E0009379D4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E278B01A25C235A8000F5957 /* NewMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMealView.swift; sourceTree = "<group>"; };
-		E2F4864B26361A2500E0CC75 /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
+		E281E804265863A1008C0DAD /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E281E80D265AE933008C0DAD /* DetailMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMealView.swift; sourceTree = "<group>"; };
+		E281E80F265B055E008C0DAD /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		E2F4864B26361A2500E0CC75 /* CIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIngredients.swift; sourceTree = "<group>"; };
 		E2F842CE25C0B68D000FFBBD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E2F842CF25C0BA6B000FFBBD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E225C43026513C4E00E96B50 /* NavigationSearchBar in Frameworks */,
+				E20DB229268A4C3A00EDCEEA /* PositionScrollView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,10 +125,10 @@
 		E24E91C525CF10EA00D3DD5F /* model */ = {
 			isa = PBXGroup;
 			children = (
-				E24E91C625CF111F00D3DD5F /* Meal.swift */,
-				E24E91CE25CF11FB00D3DD5F /* Ingredient.swift */,
-				E24E91D325CF124100D3DD5F /* Uom.swift */,
-				E2F4864B26361A2500E0CC75 /* Ingredients.swift */,
+				E24E91C625CF111F00D3DD5F /* CMeal.swift */,
+				E24E91CE25CF11FB00D3DD5F /* CIngredient.swift */,
+				E24E91D325CF124100D3DD5F /* CUom.swift */,
+				E2F4864B26361A2500E0CC75 /* CIngredients.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -144,10 +162,12 @@
 				E29962362634BFAE0079E8DC /* views */,
 				E24E91C525CF10EA00D3DD5F /* model */,
 				E25EBD3E25C0338C00F9B021 /* AlimoniaApp.swift */,
+				E281E80F265B055E008C0DAD /* VisualEffectBlur.swift */,
 				E25EBD4225C0338D00F9B021 /* Assets.xcassets */,
 				E25EBD4725C0338D00F9B021 /* Info.plist */,
 				E25EBD4425C0338D00F9B021 /* Preview Content */,
-				E225C4252650781300E96B50 /* DataStore.swift */,
+				E225C42726507CEF00E96B50 /* Alimonia.xcdatamodeld */,
+				E225C42A26508E9800E96B50 /* Persistence.swift */,
 			);
 			path = alimonia;
 			sourceTree = "<group>";
@@ -184,6 +204,10 @@
 				E260CE592634D0D900F4A9FA /* CustomTextEditor.swift */,
 				E20978D5265033090044CD9B /* MealStack.swift */,
 				E20978DA265055090044CD9B /* MultilineTextView.swift */,
+				E225C42C26513B0600E96B50 /* NavigationSearch.swift */,
+				E281E804265863A1008C0DAD /* ImagePicker.swift */,
+				E215A1162673B92A000C7011 /* CustomScrollView.swift */,
+				E20DB225268A4A6500EDCEEA /* Blur.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -193,6 +217,7 @@
 			children = (
 				E25EBD4025C0338C00F9B021 /* MealView.swift */,
 				E278B01A25C235A8000F5957 /* NewMealView.swift */,
+				E281E80D265AE933008C0DAD /* DetailMealView.swift */,
 			);
 			path = meals;
 			sourceTree = "<group>";
@@ -223,6 +248,10 @@
 			dependencies = (
 			);
 			name = alimonia;
+			packageProductDependencies = (
+				E225C42F26513C4E00E96B50 /* NavigationSearchBar */,
+				E20DB228268A4C3A00EDCEEA /* PositionScrollView */,
+			);
 			productName = alimonia;
 			productReference = E25EBD3B25C0338C00F9B021 /* alimonia.app */;
 			productType = "com.apple.product-type.application";
@@ -294,6 +323,10 @@
 				Base,
 			);
 			mainGroup = E25EBD3225C0338C00F9B021;
+			packageReferences = (
+				E225C42E26513C4E00E96B50 /* XCRemoteSwiftPackageReference "NavigationSearchBar" */,
+				E20DB227268A4C3A00EDCEEA /* XCRemoteSwiftPackageReference "PositionScrollView" */,
+			);
 			productRefGroup = E25EBD3C25C0338C00F9B021 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -336,17 +369,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2F4864C26361A2500E0CC75 /* Ingredients.swift in Sources */,
+				E225C42D26513B0600E96B50 /* NavigationSearch.swift in Sources */,
+				E2F4864C26361A2500E0CC75 /* CIngredients.swift in Sources */,
+				E20DB226268A4A6500EDCEEA /* Blur.swift in Sources */,
+				E225C42926507CEF00E96B50 /* Alimonia.xcdatamodeld in Sources */,
 				E20978DB265055090044CD9B /* MultilineTextView.swift in Sources */,
+				E225C42B26508E9800E96B50 /* Persistence.swift in Sources */,
 				E273099C264FF8E0009379D4 /* MainView.swift in Sources */,
-				E24E91C725CF111F00D3DD5F /* Meal.swift in Sources */,
+				E24E91C725CF111F00D3DD5F /* CMeal.swift in Sources */,
 				E20978D42650304A0044CD9B /* HomeView.swift in Sources */,
-				E24E91D425CF124100D3DD5F /* Uom.swift in Sources */,
+				E215A1172673B92A000C7011 /* CustomScrollView.swift in Sources */,
+				E24E91D425CF124100D3DD5F /* CUom.swift in Sources */,
 				E260CE5A2634D0D900F4A9FA /* CustomTextEditor.swift in Sources */,
-				E225C4262650781300E96B50 /* DataStore.swift in Sources */,
 				E25EBD4125C0338C00F9B021 /* MealView.swift in Sources */,
-				E24E91CF25CF11FB00D3DD5F /* Ingredient.swift in Sources */,
+				E24E91CF25CF11FB00D3DD5F /* CIngredient.swift in Sources */,
 				E25EBD3F25C0338C00F9B021 /* AlimoniaApp.swift in Sources */,
+				E281E80E265AE933008C0DAD /* DetailMealView.swift in Sources */,
+				E281E805265863A1008C0DAD /* ImagePicker.swift in Sources */,
+				E281E810265B055E008C0DAD /* VisualEffectBlur.swift in Sources */,
 				E20978D6265033090044CD9B /* MealStack.swift in Sources */,
 				E278B01B25C235A8000F5957 /* NewMealView.swift in Sources */,
 			);
@@ -670,6 +710,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E20DB227268A4C3A00EDCEEA /* XCRemoteSwiftPackageReference "PositionScrollView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kazuooooo/PositionScrollView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+		E225C42E26513C4E00E96B50 /* XCRemoteSwiftPackageReference "NavigationSearchBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markvanwijnen/NavigationSearchBar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E20DB228268A4C3A00EDCEEA /* PositionScrollView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E20DB227268A4C3A00EDCEEA /* XCRemoteSwiftPackageReference "PositionScrollView" */;
+			productName = PositionScrollView;
+		};
+		E225C42F26513C4E00E96B50 /* NavigationSearchBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E225C42E26513C4E00E96B50 /* XCRemoteSwiftPackageReference "NavigationSearchBar" */;
+			productName = NavigationSearchBar;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		E225C42726507CEF00E96B50 /* Alimonia.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E225C42826507CEF00E96B50 /* Alimonia.xcdatamodel */,
+			);
+			currentVersion = E225C42826507CEF00E96B50 /* Alimonia.xcdatamodel */;
+			path = Alimonia.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E25EBD3325C0338C00F9B021 /* Project object */;
 }

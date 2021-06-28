@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "NavigationSearchBar",
+        "repositoryURL": "https://github.com/markvanwijnen/NavigationSearchBar.git",
+        "state": {
+          "branch": null,
+          "revision": "3404a8d18b3a73d56f59036d8af0b3c55d860c63",
+          "version": "1.3.0"
+        }
+      },
+      {
+        "package": "PositionScrollView",
+        "repositoryURL": "https://github.com/kazuooooo/PositionScrollView",
+        "state": {
+          "branch": null,
+          "revision": "27cac224d2a483a727e3cd168e31186f095d35b2",
+          "version": "1.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

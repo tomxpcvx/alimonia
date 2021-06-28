@@ -7,19 +7,15 @@
  * If not, please write to: dev@tomxpcvx.wtf, or visit:
  * https://github.com/tomxpcvx/alimonia-ios/blob/main/LICENSE
  */
-	
 
 import SwiftUI
 
-struct HomeView: View {
-    var body: some View {
-        Text("Home")
+struct Blur: UIViewRepresentable {
+    var style: UIBlurEffect.Style = .systemMaterial
+    func makeUIView(context: Context) -> UIVisualEffectView {
+        return UIVisualEffectView(effect: UIBlurEffect(style: style))
+    }
+    func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
+        uiView.effect = UIBlurEffect(style: style)
     }
 }
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
-

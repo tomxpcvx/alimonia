@@ -6,9 +6,10 @@
 //
 import Foundation
 
-struct Meal : Identifiable {
+struct CMeal : Identifiable {
     let id = UUID()
     var name: String
-    var notes: String
-    var ingredients: Array<Ingredient>
+    var category: String
+    var notes: String?
+    var ingredients: Array<CIngredient>
 }
