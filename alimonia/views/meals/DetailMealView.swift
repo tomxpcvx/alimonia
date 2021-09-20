@@ -1,4 +1,3 @@
-//
 /* Copyright (C) 2021 tomxpcvx - All Rights Reserved
  * You may use, distribute and modify this code under the
  * terms of the AGPL-3.0 license.
@@ -9,9 +8,7 @@
  * https://github.com/tomxpcvx/alimonia-ios/blob/main/LICENSE
  */
 
-
 import SwiftUI
-import NavigationSearchBar
 import CoreData
 
 extension Font {
@@ -21,75 +18,6 @@ extension Font {
     
     static func avenirNextRegular(size: Int) -> Font {
         return Font.custom("AvenirNext-Regular", size: CGFloat(size))
-    }
-}
-
-struct BackgroundImage: ViewModifier {
-    
-    let uiImage: UIImage
-    
-    func body(content: Content) -> some View {
-        content
-            .opacity(0.8)
-            .background(
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .clipped()
-                    .mask(LinearGradient(gradient: Gradient(stops: [
-                        .init(color: .black, location: 0.75),
-                        .init(color: .clear, location: 1)
-                    ]), startPoint: .top, endPoint: .bottom))
-            )
-    }
-}
-
-struct ContentView: View {
-    var body: some View {
-        ScrollView {
-            // 1
-            GeometryReader { geometry in
-                Image("Placeholder")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                    .clipped()
-            }.frame(height: 300)
-            
-            VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    Image("person")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 55, height: 55)
-                        .clipShape(Circle())
-                        .shadow(radius: 4)
-                    
-                    VStack(alignment: .leading) {
-                        Text("Article Written By")
-                            .font(.avenirNext(size: 12))
-                            .foregroundColor(.gray)
-                        Text("Brandon Baars")
-                            .font(.avenirNext(size: 17))
-                    }
-                }
-                
-                Text("02 January 2019 • 5 min read")
-                    .font(.avenirNextRegular(size: 12))
-                    .foregroundColor(.gray)
-                
-                Text("Beschreibung")
-                    .font(.avenirNext(size: 28))
-            }
-            .padding(.horizontal)
-            .padding(.top, 16.0) // 2
-        }.edgesIgnoringSafeArea(.all) // 3
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
 
@@ -112,16 +40,134 @@ te dictumst mattis egestas laoreet, cubilia habitant magnis lacinia vivamus etia
 /// Bundles all meal related
 struct DetailMealView: View {
     var meal: Meal
-    
     @Environment(\.managedObjectContext) private var viewContext
-    
-    
     
     var body: some View {
         VStack {
-            CustomScrollView{
+            CustomScrollView(
+                bgImage: UIImage(
+                    data: (
+                        meal.img
+                            ?? UIImage(named: "Placeholder")?
+                                .jpegData(compressionQuality: 1)
+                    )!
+                )!
+            ) {
                 VStack(alignment: .leading, spacing: 10) {
+                    Text(meal.name!)
+                        .font(.avenirNext(size: 28).bold()).multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
+                    
+                    Text(meal.notes ?? "... ist auch ohne Beschreibung ein gutes Rezept.")
+                        .font(.avenirNext(size: 19)).multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
+                    
+                    Button(action: {
+                        //code
+                    }) {
+                        HStack {
+                            Image(systemName: "calendar.badge.plus")
+                                .font(.title2)
+                                .foregroundColor(.white)
+                            Text("ZUM PLAN HINZUFÜGEN")
+                                .bold()
+                                .font(.avenirNext(size: 16))
+                        }
+                        .frame(minWidth: 100, maxWidth: .infinity, minHeight: 50, maxHeight: 50, alignment: .center)
+                        .foregroundColor(Color.white)
+                        .background(Color.green)
+                        .cornerRadius(7)
+                    }
+                    .padding(.top, 10)
+                    
+                    Button(action: {
+                        //code
+                    }) {
+                        HStack {
+                            Image(systemName: "book")
+                                .font(.title2)
+                                .foregroundColor(.white)
+                            Text("SCHRITTE ANZEIGEN")
+                                .bold()
+                                .font(.avenirNext(size: 16))
+                        }
+                        .frame(minWidth: 100, maxWidth: .infinity, minHeight: 50, maxHeight: 50, alignment: .center)
+                        .foregroundColor(Color.white)
+                        .background(Color.green)
+                        .cornerRadius(7)
+                    }
+                    .padding(.bottom, 10)
+                    
+                    
+                    /*Button(action: {}){
+                        Image(systemName: "calendar.badge.plus")
+                            .font(.title2)
+                            .foregroundColor(.white)
+                        Text("ZUM PLAN HINZUFÜGEN").bold()
+                    }
+                    .frame(width: 350, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.white)
+                    .background(Color.clear)
+                    .border(Color.white)
+                    .padding(.top, 15.0)
+                    Button(action: {}){
+                        Image(systemName: "book")
+                            .font(.title2)
+                            .foregroundColor(.white)
+                        Text("SCHRITTE ANZEIGEN").bold()
+                    }
+                    .frame(width: 350, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .background(Color.clear)
+                    .foregroundColor(.white)
+                    .border(Color.white)
+                    .padding(.bottom, 15.0)*/
+                    
+                    
+                
+                    //Divider().frame(height: 2).background(Color.white)
+                    
+                }
+                .padding(.horizontal, 15.0)
+                    
+                Text("PORTIONEN")
+                    .padding(.leading, 15)
+                    .font(.avenirNext(size: 18).bold())
+                    .frame(width: 380, height: 40, alignment: .leading).background(Color(UIColor.darkGray).opacity(0.3))
+                
+                Text("ZUTATEN")
+                    .padding(.leading, 15)
+                    .font(.avenirNext(size: 18).bold())
+                    .frame(width: 380, height: 40, alignment: .leading).background(Color(UIColor.darkGray).opacity(0.3))
+                
+                
+                VStack {
+                    Text("NOTIZEN")
+                        .padding(.leading, 15)
+                        .font(.avenirNext(size: 18).bold())
+                        .frame(width: 380, height: 40, alignment: .leading).background(Color(UIColor.darkGray).opacity(0.3))
+                    Text("Füge deinem Rezept eine Notiz hinzu, indem du es bearbeitest.").padding(.leading, 15).padding(.top, 5)
+                        .font(.avenirNext(size: 16)).multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
+                }
+                    
+                    
+                VStack {
+                    Text("NÄHRWERTE")
+                        .padding(.leading, 15)
+                        .font(.avenirNext(size: 18).bold())
+                        .frame(width: 380, height: 40, alignment: .leading).background(Color(UIColor.darkGray).opacity(0.3))
                     HStack {
+                        Circle()
+                        Circle()
+                        Circle()
+                        Circle()
+                    }
+                    .frame(width: 250, alignment: .center)
+                }
+                    /*HStack {
                         Image("Placeholder")
                             .resizable()
                             .scaledToFill()
@@ -142,20 +188,12 @@ struct DetailMealView: View {
                         .font(.avenirNextRegular(size: 12))
                         .foregroundColor(.gray)
                     
+                    */
                     
-                    Text("Beschreibung")
-                        .font(.avenirNext(size: 28))
+                    //Text(loremIpsum)
                     
-                    Text(loremIpsum)
-                    
-                    Text(meal.notes ?? "")
-                        .lineLimit(nil)
-                        .font(.avenirNextRegular(size: 17))
-                }
             }
-            //.background(Color(UIColor.systemGroupedBackground).opacity(0.9))
         }
-        .modifier(BackgroundImage(uiImage: UIImage(data: (meal.img ?? UIImage(named: "Placeholder")?.jpegData(compressionQuality: 1))!)!))
         .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -165,7 +203,7 @@ struct DetailMealView: View {
                     Image(systemName: "square.and.pencil")
                         .imageScale(.large)
                 }).sheet(isPresented: .constant(false)) {
-                    ContentView()
+                    //ContentView()
                 }
                 
                 Button(action: {
@@ -183,5 +221,11 @@ struct DetailMealView: View {
                 })
             }
         }
+    }
+}
+
+struct DetailMealView_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailMealView(meal: Meal())
     }
 }

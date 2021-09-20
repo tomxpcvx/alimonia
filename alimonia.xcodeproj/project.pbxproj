@@ -10,13 +10,13 @@
 		E20978D42650304A0044CD9B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20978D32650304A0044CD9B /* HomeView.swift */; };
 		E20978D6265033090044CD9B /* MealStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20978D5265033090044CD9B /* MealStack.swift */; };
 		E20978DB265055090044CD9B /* MultilineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20978DA265055090044CD9B /* MultilineTextView.swift */; };
-		E20DB226268A4A6500EDCEEA /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20DB225268A4A6500EDCEEA /* Blur.swift */; };
 		E20DB229268A4C3A00EDCEEA /* PositionScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = E20DB228268A4C3A00EDCEEA /* PositionScrollView */; };
 		E215A1172673B92A000C7011 /* CustomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E215A1162673B92A000C7011 /* CustomScrollView.swift */; };
 		E225C42926507CEF00E96B50 /* Alimonia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E225C42726507CEF00E96B50 /* Alimonia.xcdatamodeld */; };
 		E225C42B26508E9800E96B50 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225C42A26508E9800E96B50 /* Persistence.swift */; };
 		E225C42D26513B0600E96B50 /* NavigationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225C42C26513B0600E96B50 /* NavigationSearch.swift */; };
 		E225C43026513C4E00E96B50 /* NavigationSearchBar in Frameworks */ = {isa = PBXBuildFile; productRef = E225C42F26513C4E00E96B50 /* NavigationSearchBar */; };
+		E2300BAA269CCBEC00A7840E /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2300BA9269CCBEC00A7840E /* BackgroundImage.swift */; };
 		E24E91C725CF111F00D3DD5F /* CMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91C625CF111F00D3DD5F /* CMeal.swift */; };
 		E24E91CF25CF11FB00D3DD5F /* CIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91CE25CF11FB00D3DD5F /* CIngredient.swift */; };
 		E24E91D425CF124100D3DD5F /* CUom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E91D325CF124100D3DD5F /* CUom.swift */; };
@@ -56,11 +56,11 @@
 		E20978D32650304A0044CD9B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E20978D5265033090044CD9B /* MealStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealStack.swift; sourceTree = "<group>"; };
 		E20978DA265055090044CD9B /* MultilineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextView.swift; sourceTree = "<group>"; };
-		E20DB225268A4A6500EDCEEA /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		E215A1162673B92A000C7011 /* CustomScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollView.swift; sourceTree = "<group>"; };
 		E225C42826507CEF00E96B50 /* Alimonia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alimonia.xcdatamodel; sourceTree = "<group>"; };
 		E225C42A26508E9800E96B50 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E225C42C26513B0600E96B50 /* NavigationSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSearch.swift; sourceTree = "<group>"; };
+		E2300BA9269CCBEC00A7840E /* BackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
 		E24E91C625CF111F00D3DD5F /* CMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMeal.swift; sourceTree = "<group>"; };
 		E24E91CE25CF11FB00D3DD5F /* CIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIngredient.swift; sourceTree = "<group>"; };
 		E24E91D325CF124100D3DD5F /* CUom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUom.swift; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 				E225C42C26513B0600E96B50 /* NavigationSearch.swift */,
 				E281E804265863A1008C0DAD /* ImagePicker.swift */,
 				E215A1162673B92A000C7011 /* CustomScrollView.swift */,
-				E20DB225268A4A6500EDCEEA /* Blur.swift */,
+				E2300BA9269CCBEC00A7840E /* BackgroundImage.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -371,8 +371,8 @@
 			files = (
 				E225C42D26513B0600E96B50 /* NavigationSearch.swift in Sources */,
 				E2F4864C26361A2500E0CC75 /* CIngredients.swift in Sources */,
-				E20DB226268A4A6500EDCEEA /* Blur.swift in Sources */,
 				E225C42926507CEF00E96B50 /* Alimonia.xcdatamodeld in Sources */,
+				E2300BAA269CCBEC00A7840E /* BackgroundImage.swift in Sources */,
 				E20978DB265055090044CD9B /* MultilineTextView.swift in Sources */,
 				E225C42B26508E9800E96B50 /* Persistence.swift in Sources */,
 				E273099C264FF8E0009379D4 /* MainView.swift in Sources */,
